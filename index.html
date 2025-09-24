@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RANSAC in 2025 — ICCV 2025 Tutorial</title>
+  <meta name="description" content="ICCV 2025 tutorial: RANSAC in 2025 — schedule and speaker information." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020; --panel:#0f172a; --ink:#e5e7eb; --muted:#a3a3a3; --accent:#60a5fa; --ring:#1e293b;
+      --card:#111827; --chip:#0b132b; --table:#0b1222; --sep:#1f2937;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px; margin:0 auto; padding:24px}
+    header{position:sticky; top:0; z-index:20; backdrop-filter:saturate(120%) blur(8px); background:linear-gradient(180deg, rgba(11,16,32,.9), rgba(11,16,32,.65)); border-bottom:1px solid var(--ring)}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,#60a5fa,#22d3ee); box-shadow:0 10px 30px rgba(34,211,238,.25)}
+    h1{font-size:clamp(26px,3.4vw,40px); margin:18px 0 8px}
+    .subtitle{color:var(--muted); font-weight:400}
+
+    .hero{padding:56px 24px 24px}
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
+    .card{background:linear-gradient(180deg, rgba(17,24,39,.9), rgba(17,24,39,.7)); border:1px solid var(--ring); border-radius:18px; padding:18px}
+    .kbd{font:600 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:var(--chip); color:#cbd5e1; padding:3px 8px; border:1px solid #1f2937; border-radius:8px}
+
+    table{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius:14px}
+    thead th{position:sticky; top:0; background:var(--table); color:#cbd5e1; text-align:left; font-weight:600; padding:12px; border-bottom:1px solid var(--sep)}
+    tbody td{padding:12px; border-bottom:1px dashed var(--sep)}
+    tbody tr:hover{background:rgba(148,163,184,.06)}
+    .time{white-space:nowrap; font-variant-numeric:tabular-nums}
+    .pill{display:inline-block; padding:2px 10px; border-radius:999px; border:1px solid var(--sep); background:#0b1222; font-size:12px; color:#cbd5e1}
+
+    .section-title{font-size:clamp(18px,2.6vw,26px); margin:6px 0 14px}
+    .speakers{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px}
+    .speaker{background:linear-gradient(180deg, rgba(15,23,42,.9), rgba(15,23,42,.7)); border:1px solid var(--ring); border-radius:16px; padding:16px; display:flex; flex-direction:column; gap:10px}
+    .speaker img{width:100%; height:220px; object-fit:cover; border-radius:12px; border:1px solid var(--ring)}
+    .speaker h3{margin:0 0 6px; font-size:19px}
+    .speaker .aff{color:#cbd5e1}
+    .speaker .email{margin:6px 0 8px; font-size:14px}
+    .speaker p{color:#e5e7eb; opacity:.9}
+
+    footer{border-top:1px solid var(--ring); margin-top:32px; padding:18px 24px; color:var(--muted)}
+    .btn{display:inline-flex; gap:8px; align-items:center; padding:10px 14px; border-radius:12px; border:1px solid var(--ring); background:#0b1222; color:#e5e7eb}
+    .btn:hover{background:#0b132b}
+
+    @media (max-width:700px){
+      .nav{padding:12px 16px}
+      .hero{padding:36px 16px 16px}
+      .grid{gap:12px}
+      .card{padding:14px}
+      thead{display:none}
+      table, tbody, tr, td{display:block; width:100%}
+      tbody tr{margin-bottom:10px; border:1px solid var(--ring); border-radius:12px; padding:8px}
+      tbody td{border:none; display:flex; justify-content:space-between}
+      tbody td::before{content:attr(data-label); color:#9ca3af; margin-right:8px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav wrap">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:800; letter-spacing:.2px">RANSAC in 2025</div>
+          <div class="subtitle">ICCV 2025 Tutorial</div>
+        </div>
+      </div>
+      <nav style="display:flex; gap:14px">
+        <a class="btn" href="#schedule" aria-label="Jump to schedule">Schedule</a>
+        <a class="btn" href="#speakers" aria-label="Jump to speakers">Speakers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>RANSAC in 2025</h1>
+      <p class="subtitle">A focused ICCV 2025 tutorial on robust estimation: algorithms, solvers, and downstream applications.</p>
+      <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+        <span class="kbd">#RANSAC</span>
+        <span class="kbd">#RobustEstimation</span>
+        <span class="kbd">#ICCV2025</span>
+      </div>
+    </section>
+
+    <section id="schedule" class="grid" style="margin-top:8px">
+      <div class="card" style="grid-column:1/-1">
+        <h2 class="section-title">Schedule</h2>
+        <div style="overflow:auto">
+          <table aria-describedby="schedule-desc">
+            <thead>
+              <tr>
+                <th>Begin</th>
+                <th>End</th>
+                <th>Title</th>
+                <th>Presenter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="time">13:00</td><td class="time">13:45</td><td>Introduction to RANSAC</td><td>Prof. Jiri Matas</td></tr>
+              <tr><td class="time">13:45</td><td class="time">14:30</td><td>State-of-the-Art RANSAC Pipeline that Generalizes Across Tasks</td><td>Dr. Daniel Barath</td></tr>
+              <tr><td class="time">14:30</td><td class="time">14:50</td><td>Coffee break</td><td>&mdash;</td></tr>
+              <tr><td class="time">14:50</td><td class="time">15:35</td><td>Minimal Solvers and Model Refinement</td><td>Prof. Viktor Larsson</td></tr>
+              <tr><td class="time">15:35</td><td class="time">16:20</td><td>Differentiable and Learning-Based Alternatives</td><td>Dr. Eric Brachmann</td></tr>
+              <tr><td class="time">16:20</td><td class="time">17:00</td><td>RANSAC in Downstream Vision Tasks</td><td>Dr. Dmytro Mishkin</td></tr>
+              <tr><td class="time">17:00</td><td class="time">17:10</td><td>Conclusion. Open Problems. Q&amp;A</td><td>All</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="speakers" class="grid" style="margin-top:12px">
+      <div class="card" style="grid-column:1/-1">
+        <h2 class="section-title">Speakers</h2>
+        <div class="speakers">
+          <article class="speaker">
+            <img src="dmytro.jpg" alt="Portrait of Dr. Dmytro Mishkin" />
+            <h3>Dr. Dmytro Mishkin</h3>
+            <div class="aff">Czech Technical University in Prague / HOVER Inc.</div>
+            <div class="email"><a href="mailto:mishkdmy@fel.cvut.cz">mishkdmy@fel.cvut.cz</a></div>
+            <p>Dr. Dmytro Mishkin is a Senior Computer Vision Engineer at HOVER Inc. and a postdoc at the Czech Technical University in Prague. He is a co-founder of the Ukrainian Research Group &quot;Szkocka&quot; and the Eastern European Conference on Computer Vision. His research combines classical computer vision algorithms with deep learning for wide baseline stereo.</p>
+          </article>
+
+          <article class="speaker">
+            <img src="daniel.jpg" alt="Portrait of Dr. Daniel Barath" />
+            <h3>Dr. Daniel Barath</h3>
+            <div class="aff">Computer Vision and Geometry Group, ETH Zürich</div>
+            <div class="email"><a href="mailto:danielbela.barath@inf.ethz.ch">danielbela.barath@inf.ethz.ch</a></div>
+            <p>Daniel Barath was born in 1989 in Budapest. He had his Ph.D. defense in 2019 at the Eotvos Lorand University. Until 2021, he was a member of the Visual Recognition Group, FEE, Czech Technical University, Prague, Czech Republic, and the Machine Perception Research Laboratory at the Institute for Computer Science and Control (HUN-REN SZTAKI), Budapest, Hungary. Currently, he is a senior researcher of the Computer Vision and Geometry Group at ETH Zürich and a visiting researcher at Google in the Semantic Perception Group. His research interests are robust model estimation, minimal methods, scene reconstruction and understanding in computer vision. He has co-organized tutorials on various topics at CVPR 2020, 2022, ICPR 2020, ICCV 2023, and 3DV 2024.</p>
+          </article>
+
+          <article class="speaker">
+            <img src="eric.jpg" alt="Portrait of Dr. Eric Brachmann" />
+            <h3>Dr. Eric Brachmann</h3>
+            <div class="aff">Niantic</div>
+            <div class="email"><a href="mailto:ebrachmann@nianticlabs.com">ebrachmann@nianticlabs.com</a></div>
+            <p>Eric Brachmann is a staff scientist at Niantic, working on Niantic&#39;s Visual Positioning System. He received a doctorate in 2018 by the TU Dresden (Germany), and he was a post-doctoral researcher at the Visual Learning Lab of Prof. Rother at the University Heidelberg, until 2020. He works on 3D vision topics such as object pose estimation, camera re-localization, discrete feature matching, robust estimation and structure-from-motion. He is an expert in scene coordinate regression, which is a core element in state-of-the-art learning-based localization techniques. He publishes his work at the leading computer vision conferences, is an active reviewer and area chair. He co-organized multiple tutorials, workshops and challenges on visual localization, 6D pose estimation of objects, and map-free visual relocalisation.</p>
+          </article>
+
+          <article class="speaker">
+            <img src="jiri.jpg" alt="Portrait of Prof. Jiri Matas" />
+            <h3>Prof. Jiri Matas</h3>
+            <div class="aff">Czech Technical University in Prague</div>
+            <div class="email"><a href="mailto:matas@fel.cvut.cz">matas@fel.cvut.cz</a></div>
+            <p>Jiri Matas is the head of the Visual Recognition Group at the Center for Machine Perception, Department of Cybernetics, Czech Technical University in Prague. He has published more than 300 papers that have been cited about 74000 times in Google Scholar (h-index = 98). J. Matas served as a programme or general chair at ECCV 2004, 2016, 2022 and CVPR 2007 and 2022. He is an Editor-in-Chief of the International Journal of Computer Vision. He is on the computer science panel of the ERC. He has co-organised tutorials, e.g., at CVPR 2005 and 2020.</p>
+          </article>
+
+          <article class="speaker">
+            <img src="viktor.jpg" alt="Portrait of Prof. Viktor Larsson" />
+            <h3>Prof. Viktor Larsson</h3>
+            <div class="aff">Lund University</div>
+            <div class="email"><a href="mailto:viktor.larsson@math.lth.se">viktor.larsson@math.lth.se</a></div>
+            <p>Viktor Larsson is currently an assistant professor at Lund University. He previously worked as a senior researcher at the Computer Vision and Geometry group at ETH Zurich. His research is mainly focused on robust estimation and optimisation problems that appear in 3D computer vision (e.g. Structure-from-Motion, visual localization, SLAM and dense geometry estimation). His research has received paper awards at ICPR’16, ACCV’18, ICCV’21 and 3DV’24. He has previously co-organised tutorials at CVPR 2019, ECCV 2022, ICCV 2023 and 3DV 2024 on related topics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:12px">
+      <div class="card" style="grid-column:1/-1; display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+        <div>
+          <strong>Materials</strong>
+          <div class="subtitle">Slides and recordings (links will appear here).</div>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="#" aria-disabled="true" onclick="return false">Slides (TBA)</a>
+          <a class="btn" href="#" aria-disabled="true" onclick="return false">Video (TBA)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <div>© 2025 RANSAC in 2025 — ICCV 2025 Tutorial</div>
+      <div>Maintainer: <a href="mailto:danielbela.barath@inf.ethz.ch">danielbela.barath@inf.ethz.ch</a></div>
+    </div>
+  </footer>
+</body>
+</html>
